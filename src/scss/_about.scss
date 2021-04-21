@@ -1,0 +1,82 @@
+@import "partials/params";
+@import "partials/function";
+@import "partials/mixins";
+
+// --- Block 5 .about --- //
+
+.about{
+  background: $block-5-bg;
+
+  .about__block{
+    padding: 100px 0;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .about__description{
+    flex: 0 0 fun-width-interest(515px,1200px);
+    border-right: 2px dashed $block-5-border;
+    box-sizing: border-box;
+    padding: 0 100px 0 0;
+  }
+
+  .about__title{
+    color: $block-5-title-color;
+    font-size: fun-px-tp-em(35px);
+    margin: 0 0 25px 0;
+  }
+
+  .about__text{
+    color: $block-5-text-color;
+    @include font($fz:18px,$lh:1.5,$fw:300);
+  }
+
+  .about__img{
+    flex: 0 0 fun-width-interest(630px,1200px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .about__profile{
+    flex: 0 0 fun-width-interest(150px,630px);
+    text-align: center;
+
+    .profile__img{
+      margin: 0 0 14px 0;
+    }
+
+    .profile__name{
+      color: $block-5-title-color;
+      font-size: fun-px-tp-em(18px);
+      margin: 0 0 8px 0;
+    }
+
+    .profile__job{
+      color: $block-5-text-color;
+      margin: 0 0 10px 0;
+    }
+
+    .profile__soc{
+      user-select: none;
+      display: flex;
+      justify-content: space-evenly;
+    }
+
+    .profile__link{
+      color: $block-5-link-color;
+      transition: 0.3s color;
+      font-size: fun-px-tp-em(18px);
+      text-decoration: none;
+
+      &:hover{
+        color: $block-5-linkHover-color;
+      }
+    }
+
+    .profile__icon{
+
+    }
+  }
+
+}

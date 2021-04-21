@@ -1,0 +1,157 @@
+@import "partials/params";
+@import "partials/function";
+@import "partials/mixins";
+
+// --- Block 4 .package --- //
+
+.package{
+  background: $block-4-bg;
+  border-bottom: 7px dotted $block-4-border;
+
+  &__background{
+
+  }
+
+  &__img{
+    object-fit: cover;
+    width: 100%;
+    height: 380px;
+  }
+
+  &__block{
+    margin-top: -280px;
+    padding: 0 0 100px 0;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__rate{
+    flex: 0 0 fun-width-interest(255px,1200px);
+    background: $block-4-bg;
+    box-sizing: border-box;
+    padding: 32px 22px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+
+    &--yellow{
+      border-top: 5px solid $block-4-element1-color;
+
+      .rate__value{
+        color: $block-4-element1-color;
+      }
+
+      .rate__price{
+        border-bottom: 3px solid $block-4-element1-color;
+      }
+    }
+
+    &--grey{
+      border-top: 5px solid $block-4-element2-color;
+
+      .rate__value{
+        color: $block-4-element2-color;
+      }
+
+      .rate__price{
+        border-bottom: 3px solid $block-4-element2-color;
+      }
+    }
+
+    &--red{
+      border-top: 5px solid $block-4-element3-color;
+
+      .rate__value{
+        color: $block-4-element3-color;
+      }
+
+      .rate__price{
+        border-bottom: 3px solid $block-4-element3-color;
+      }
+    }
+
+    &--green{
+      border-top: 5px solid $block-4-element4-color;
+
+      .rate__value{
+        color: $block-4-element4-color;
+      }
+
+      .rate__price{
+        border-bottom: 3px solid $block-4-element4-color;
+      }
+    }
+
+    & .rate__top-block{
+      text-align: center;
+      border-bottom: 1px solid $block-4-border;
+    }
+
+    & .rate__icon{
+      margin: 0 0 20px 0;
+    }
+
+    & .rate__title{
+      color: $block-4-topBlock-color;
+      margin: 0 0 20px 0;
+      text-transform: uppercase;
+    }
+
+    & .rate__block-center{
+      color: $block-4-centerBlock-color;
+      padding: 20px 0;
+      list-style: none;
+    }
+
+    & .rate__item{
+      display: flex;
+      justify-content: space-between;
+      margin: 0 0 20px 0;
+
+      &:last-child{
+        margin: 0 0 0 0;
+      }
+    }
+
+    & .rate__key{
+
+    }
+
+    & .rate__value{
+      padding: 0 20px 0 10px;
+    }
+
+    & .rate__block-bottom{
+      color: $block-4-bottomBlock-color;
+      border-top: 1px solid $block-4-border;
+      padding: 30px 0 0 0;
+    }
+
+    & .rate__price{
+      width: fun-width-interest(100px,255px);
+      text-align: center;
+      font-size: fun-px-tp-em(27px);
+      letter-spacing: 1px;
+      margin: 0 auto 20px auto;
+
+      & sup{
+        font-size: fun-px-tp-em(16px,27px);
+        opacity: 0.8;
+      }
+
+      & sub{
+        font-size: fun-px-tp-em(13px,27px);
+        position: relative;
+        top: -5px;
+        opacity: 0.5;
+      }
+
+    }
+
+    & .rate__plan{
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+  }
+
+
+}

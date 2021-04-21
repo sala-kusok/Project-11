@@ -1,0 +1,118 @@
+@import "partials/params";
+@import "partials/function";
+@import "partials/mixins";
+
+// --- Block 3 .buy --- //
+
+.buy{
+  background: $block-3-bg;
+
+  .buy__block{
+    padding: 85px 0;
+
+    .buy__title{
+      color: $block-3-title-color;
+      text-align: center;
+      font-size: fun-px-tp-em(24px);
+      margin: 0 0 25px 0;
+    }
+
+    .buy__subtitle{
+      color: $block-3-subtitle-color;
+      text-align: center;
+      @include font($fw:200);
+      margin: 0 0 40px 0;
+    }
+
+    .buy__input-wrapper{
+      color: $block-3-input-color;
+      border: 1px solid $block-3-border;
+      width: fun-width-interest(890px,1200px);
+      margin: 0 auto 55px auto;
+      padding: 7px 0;
+      display: flex;
+
+
+      .buy__www{
+        flex: 0 0 fun-width-interest(75px,885px);
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0.5;
+      }
+
+      .buy__input-block{
+        width: 100%;
+        display: flex;
+        padding: 7px 0;
+        border-left: 1px solid $block-3-border;
+        border-right: 1px solid $block-3-border;
+      }
+
+      .buy__input{
+        flex: 0 0 90%;
+        border: 0;
+        padding: 0 17px;
+        box-sizing: border-box;
+        @include font($fz:15px,$fw:600);
+      }
+
+      .buy__domain{
+        flex: 0 0 10%;
+        opacity: 0.5;
+      }
+
+      .buy__select{
+        flex: 0 0 fun-width-interest(75px,885px);
+        display: inline-flex;
+        justify-content: right;
+        align-items: center;
+      }
+
+      .buy__icon{
+        padding: 0 15px 0 0;
+        @include font($fz:14px);
+        opacity: 0.5;
+      }
+
+    }
+
+    .buy__table{
+      color: $block-3-table-color;
+      width: fun-width-interest(830px,1200px);
+      margin: 0 auto;
+
+      .table__row{
+        display: flex;
+        text-align: center;
+
+        .table__cell{
+          flex: 0 0 25%;
+          box-sizing: border-box;
+          padding: 25px 0;
+
+          &--top{
+            border-right: 1px solid $block-3-border;
+            border-bottom: 1px solid $block-3-border;
+
+            &:last-child{
+              border-right: none;
+            }
+          }
+
+          &--bottom{
+            border-right: 1px solid $block-3-border;
+
+            &:last-child{
+              border-right: none;
+            }
+          }
+        }
+
+      }
+
+    }
+
+  }
+
+}

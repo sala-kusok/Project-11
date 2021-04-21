@@ -1,0 +1,62 @@
+@import "partials/params";
+@import "partials/function";
+@import "partials/mixins";
+
+// --- Block 7 .feature --- //
+
+.feature{
+  background: $block-7-bg;
+
+  .feature__block{
+    padding: 95px 0 90px 0;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .feature__tile{
+    flex: 0 0 fun-width-interest(216px,1200px);
+    text-align: center;
+
+    .tile__icon{
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      margin: 0 auto 20px auto;
+      display: flex;
+
+      & i{
+        margin: auto;
+        font-size: fun-px-tp-em(28px);
+      }
+
+      &--yellow{
+        background: $block-7-element1-color;
+      }
+
+      &--blue{
+        background: $block-7-element2-color;
+      }
+
+      &--grey{
+        background: $block-7-element3-color;
+      }
+
+      &--orange{
+        background: $block-7-element4-color;
+      }
+    }
+
+    .tile__title{
+      color: $block-7-title-color;
+      font-size: fun-px-tp-em(18px);
+      margin: 0 0 15px 0;
+    }
+
+    .tile__text{
+      color: $block-7-text-color;
+      @include font($lh:1.4);
+    }
+
+  }
+
+}

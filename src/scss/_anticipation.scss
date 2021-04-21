@@ -1,0 +1,23 @@
+@import "partials/params";
+@import "partials/function";
+@import "partials/mixins";
+
+// --- Block 2 .anticipation --- //
+
+.anticipation{
+  background: $block-2-bg;
+
+  .anticipation__block{
+    padding: 35px 0;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .anticipation__link{
+    color: $block-2-color;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: fun-px-tp-em(22px);
+  }
+
+}

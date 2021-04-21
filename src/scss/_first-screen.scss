@@ -1,0 +1,84 @@
+@import "partials/params";
+@import "partials/function";
+@import "partials/mixins";
+
+// --- Block 1 .first-screen --- //
+
+.first-screen{
+  position: relative;
+  background: url("../images/header_bg.jpg") top center / cover $block-1-bg;
+  color: $block-1-color;
+  height: 100vh;
+}
+
+.nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .nav__brand{
+    flex: 0 0 auto;
+  }
+
+  .nav__block{
+
+    .nav__list{
+      display: flex;
+    }
+
+    .nav__item{
+      position: relative;
+      padding: 35px 0;
+      margin: 0 25px;
+      z-index: 99;
+
+      &::before{
+        content: '';
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 2px;
+        background: $block-1-color;
+        opacity: 0;
+        transition: 0.3s opacity;
+      }
+
+      &:hover::before{
+        opacity: 1;
+      }
+    }
+
+    .nav__link{
+      color: $block-1-color;
+      text-decoration: none;
+    }
+  }
+
+}
+
+.slogan{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  & > &__title{
+    color: $block-1-color;
+    text-align: center;
+    @include font($fz:32px,$lh:1.5,$fs:italic);
+
+    & span{
+      font-style: normal;
+      font-weight: bold;
+      font-size: fun-px-tp-em(72px, $context: 32px);
+    }
+  }
+
+}
+
+
+

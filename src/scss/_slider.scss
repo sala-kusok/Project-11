@@ -1,0 +1,50 @@
+@import "partials/params";
+@import "partials/function";
+@import "partials/mixins";
+
+// --- Block 6 .slider --- //
+
+.slider{
+  background: url("../images/comment_bg.jpg") center center/ cover no-repeat $block-6-bg;
+
+  .slider__block{
+    color: $block-6-color;
+    padding: 50px 0;
+  }
+
+  .slider__quote{
+    width: fun-width-interest(858px,1200px);
+    margin: 0 auto 20px auto;
+    @include font($fz:20px,$lh:1.5);
+    text-align: center;
+  }
+
+  .slider__info{
+    display: flex;
+    justify-content: center;
+  }
+
+  .slider__name{
+    @include font($fz:20px);
+    margin: 0 25px 0 0;
+  }
+
+  .slider__icons{
+    display: flex;
+    align-items: center;
+  }
+
+  .spider__icon{
+    border: 1px solid $block-6-color;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin: 0 10px 0 0;
+    cursor: pointer;
+
+    &--active{
+      background: $block-6-color;
+    }
+  }
+
+}

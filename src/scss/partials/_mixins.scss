@@ -1,0 +1,36 @@
+@import "params";
+@import "function";
+
+// граница
+@mixin out($color: red){
+  outline: 1px solid $color;
+}
+
+// работа со шриштом
+@mixin font($fz:16px, $fw:$font-weight-body, $lh:$line-height-body, $fs:$font-style-body, $all:false){
+
+  @if $all == false{
+    $fz: fun-px-tp-em($fz);
+
+    @if  $font-style-body != $fs{
+      font-style: $fs;
+    }
+    @if  $font-weight-body != $fw{
+      font-weight: $fw;
+    }
+    @if  $font-size-body != $fz{
+      font-size: $fz;
+    }
+    @if $line-height-body != $lh{
+      line-height: $lh;
+    }
+  }
+
+  @if $all == true{
+    font-style: $fs;
+    font-weight: $fw;
+    font-size: fun-px-tp-em($fz);
+    line-height: $lh;
+  }
+
+}
